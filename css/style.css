@@ -23,3 +23,55 @@ a {
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
+
+/* En-tête : bandeau navy, logo à gauche, navigation à droite */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header p {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+}
+
+/* Navigation : liste sans puces, liens en ligne */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Contenu : largeur lisible et espace blanc */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+main section {
+  padding: 3rem 0;
+}
