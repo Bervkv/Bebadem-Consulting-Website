@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }} | Bebadem Consulting</title>
-    <meta name="description" content="{{ description }}" />
+    <meta name="description" content="{{ description or summary }}" />
 
     <!-- Polices Google Fonts (à auto-héberger plus tard) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
 
-    <!-- Chemins absolus : les pages vivent maintenant dans des sous-dossiers (/services/) -->
     <link rel="stylesheet" href="/css/tokens.css" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
@@ -40,7 +39,6 @@
       <p>© 2026 BEBADEM CONSULTING. Tous droits réservés.</p>
     </footer>
 
-    <!-- Scripts propres à une page, déclarés dans son en-tête (front matter) -->
     {% for src in scripts %}
     <script src="{{ src }}" defer></script>
     {% endfor %}

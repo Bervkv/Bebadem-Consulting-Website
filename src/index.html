@@ -1,79 +1,91 @@
 ---
 layout: base.njk
 title: Cybersécurité au Tchad
-description: "Cabinet de Cybersécurité au Tchad : audit firmware et IoT, supervision, formation et conformité."
+description: "Cabinet de cybersécurité au Tchad : audit firmware et IoT, supervision, formation et conformité."
 ---
-
-
 <!-- Ouverture : positionnement en une phrase -->
-      <section>
-        <h1>
-          Nous testons vos systèmes, jusqu'au firmware de vos équipements
-          connectés, avant qu'un attaquant ne le fasse.
-        </h1>
-        <p>
-          Cabinet de cybersécurité au Tchad : audit, supervision et formation
-          pour les dirigeants qui veulent savoir où ils sont exposés.
-        </p>
-      </section>
+<section>
+  <h1>
+    Nous testons vos systèmes, jusqu'au firmware de vos équipements
+    connectés, avant qu'un attaquant ne le fasse.
+  </h1>
+  <p>
+    Cabinet de cybersécurité au Tchad : audit, supervision et formation
+    pour les dirigeants qui veulent savoir où ils sont exposés.
+  </p>
+</section>
 
-      <!-- Chiffres clés : contexte du marché tchadien -->
-      <section>
-        <h2>Le numérique tchadien en chiffres</h2>
-        <ul>
-          <li>
-            <strong>2,79 millions</strong>
-            <span>de personnes utilisaient Internet au Tchad fin 2025.</span>
-          </li>
-          <li>
-            <strong>13,2 %</strong>
-            <span>de la population était connectée : un marché encore jeune, où les bonnes pratiques de sécurité restent à installer.</span>
-          </li>
-        </ul>
-        <p class="source">
-          Source : DataReportal, « Digital 2026 : Chad » (données de fin 2025).
-        </p>
-      </section>
+<!-- Chiffres clés : contexte du marché tchadien -->
+<section class="key-figures">
+  <h2>Le numérique tchadien en chiffres</h2>
+  <ul>
+    <li>
+      <strong>2,79 millions</strong>
+      <span>de personnes utilisaient Internet au Tchad fin 2025.</span>
+    </li>
+    <li>
+      <strong>13,2 %</strong>
+      <span>de la population était connectée : un marché encore jeune, où les bonnes pratiques de sécurité restent à installer.</span>
+    </li>
+  </ul>
+  <p class="source">
+    Source : DataReportal, « Digital 2026 : Chad » (données de fin 2025).
+  </p>
+</section>
 
-      <!-- Aperçu des services -->
-      <section>
-        <h2>Six services pour protéger votre activité</h2>
-        <ol>
-          <li>
-            <h3>Audit Firmware / IoT</h3>
-            <p>Vous savez si vos équipements connectés peuvent être pris en main à distance.</p>
-          </li>
-          <li>
-            <h3>Audit de vulnérabilités</h3>
-            <p>Vous connaissez les failles qu'un attaquant verrait en premier.</p>
-          </li>
-          <li>
-            <h3>Supervision SIEM / ELK</h3>
-            <p>Vous voyez une attaque pendant qu'elle se produit, pas des semaines après.</p>
-          </li>
-          <li>
-            <h3>Continuité d'infrastructure</h3>
-            <p>Votre activité continue quand un serveur ou une liaison tombe.</p>
-          </li>
-          <li>
-            <h3>Sensibilisation des équipes</h3>
-            <p>Vos collaborateurs reconnaissent un message piégé avant de cliquer.</p>
-          </li>
-          <li>
-            <h3>Conformité ISO 27001 / ANSICE</h3>
-            <p>Vous savez où vous en êtes face aux référentiels, et quoi corriger en premier.</p>
-          </li>
-        </ol>
-        <p><a href="services.html">Voir tous les services</a></p>
-      </section>
+<!-- Aperçu des services -->
+<section>
+  <h2>Six services pour protéger votre activité</h2>
+  <ol>
+    <li>
+      <h3>Audit Firmware / IoT</h3>
+      <p>Vous savez si vos équipements connectés peuvent être pris en main à distance.</p>
+    </li>
+    <li>
+      <h3>Audit de vulnérabilités</h3>
+      <p>Vous connaissez les failles qu'un attaquant verrait en premier.</p>
+    </li>
+    <li>
+      <h3>Supervision SIEM / ELK</h3>
+      <p>Vous voyez une attaque pendant qu'elle se produit, pas des semaines après.</p>
+    </li>
+    <li>
+      <h3>Continuité d'infrastructure</h3>
+      <p>Votre activité continue quand un serveur ou une liaison tombe.</p>
+    </li>
+    <li>
+      <h3>Sensibilisation des équipes</h3>
+      <p>Vos collaborateurs reconnaissent un message piégé avant de cliquer.</p>
+    </li>
+    <li>
+      <h3>Conformité ISO 27001 / ANSICE</h3>
+      <p>Vous savez où vous en êtes face aux référentiels, et quoi corriger en premier.</p>
+    </li>
+  </ol>
+  <p><a href="/services/">Voir tous les services</a></p>
+</section>
 
-      <!-- Appel à l'action -->
-      <section>
-        <h2>Parlons de votre situation</h2>
-        <p>
-          Décrivez-nous votre activité en quelques lignes : nous vous répondons
-          avec une première analyse de vos risques.
-        </p>
-        <p><a class="button" href="contact.html">Demander un échange</a></p>
-      </section>
- 
+<!-- Dernières actualités (tirées automatiquement des articles) -->
+<section class="latest-news">
+  <h2>Dernières actualités</h2>
+  <ul class="news-list">
+    {% for post in collections.latestNews %}
+    <li>
+      <p class="meta">{{ post.date | dateFr }}</p>
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      <p>{{ post.data.summary }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <p><a href="/actualites/">Toutes les actualités</a></p>
+</section>
+
+<!-- Appel à l'action -->
+<section>
+  <h2>Parlons de votre situation</h2>
+  <p>
+    Décrivez-nous votre activité en quelques lignes : nous vous répondons
+    avec une première analyse de vos risques.
+  </p>
+  <p><a class="button" href="/contact/">Demander un échange</a></p>
+</section>

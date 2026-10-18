@@ -91,7 +91,7 @@ h2 {
 }
 
 /* Chiffres clés */
-main section:nth-child(2) ul {
+.key-figures ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -100,12 +100,12 @@ main section:nth-child(2) ul {
   gap: 2rem;
 }
 
-main section:nth-child(2) li {
+.key-figures li {
   border-top: 2px solid var(--gold);
   padding-top: 1rem;
 }
 
-main section:nth-child(2) strong {
+.key-figures strong {
   display: block;
   font-family: var(--font-title);
   font-size: 2.5rem;
@@ -169,6 +169,38 @@ main ol li.featured {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--navy);
+}
+
+/* Actualités */
+.news-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.news-list li {
+  border-top: 1px solid #d9dde5;
+  padding: 1.25rem 0;
+}
+
+.news-list h2,
+.news-list h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.news-list p { margin: 0 0 0.5rem; }
+
+.meta {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 0 0 0.25rem;
+}
+
+/* Page d'un article : colonne de lecture étroite */
+main article {
+  max-width: 42rem;
+  padding: 4rem 0 3rem;
 }
 
 /* Bouton : texte navy sur fond doré */
