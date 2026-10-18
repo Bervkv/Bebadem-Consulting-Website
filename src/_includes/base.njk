@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} | Bebadem Consulting</title>
+    <meta name="description" content="{{ description }}" />
+
+    <!-- Polices Google Fonts (à auto-héberger plus tard) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Serif+4:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Chemins absolus : les pages vivent maintenant dans des sous-dossiers (/services/) -->
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <p>BEBADEM CONSULTING</p>
+      <nav aria-label="Navigation principale">
+        <ul>
+          {% for item in navigation %}
+          <li>
+            <a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>
+      <p>© 2026 BEBADEM CONSULTING. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts propres à une page, déclarés dans son en-tête (front matter) -->
+    {% for src in scripts %}
+    <script src="{{ src }}" defer></script>
+    {% endfor %}
+  </body>
+</html>

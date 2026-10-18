@@ -1,0 +1,25 @@
+{
+  "name": "bebadem-consulting-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "start": "eleventy --serve",
+  "build": "eleventy"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bervkv/Bebadem-Consulting-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Bervkv/Bebadem-Consulting-Website/issues"
+  },
+  "homepage": "https://github.com/Bervkv/Bebadem-Consulting-Website#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

@@ -1,0 +1,269 @@
+/* Reset léger */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--navy);
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* En-tête et navigation */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header p {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* Contenu : largeur lisible et espace blanc */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+main section { padding: 3rem 0; }
+
+main section:first-child { padding: 5rem 0 3rem; }
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  max-width: 22ch;
+  margin: 0 0 1rem;
+}
+
+main section:first-child p {
+  font-size: 1.25rem;
+  max-width: 40rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0 0 1.5rem;
+}
+
+/* Chiffres clés */
+main section:nth-child(2) ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+}
+
+main section:nth-child(2) li {
+  border-top: 2px solid var(--gold);
+  padding-top: 1rem;
+}
+
+main section:nth-child(2) strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.source {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 1.5rem;
+}
+
+/* Services : liste numérotée sobre */
+main ol {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  counter-reset: service;
+}
+
+main ol li {
+  counter-increment: service;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  column-gap: 1rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid #d9dde5;
+}
+
+main ol li::before {
+  content: counter(service, decimal-leading-zero);
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--navy);
+}
+
+main ol li > * { grid-column: 2; }
+
+main ol h2,
+main ol h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+main ol p { margin: 0 0 0.5rem; }
+
+/* Service mis en avant (Audit Firmware / IoT) */
+main ol li.featured {
+  border-left: 4px solid var(--gold);
+  background: #faf7f2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+/* Bouton : texte navy sur fond doré */
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--gold);
+  transition: background 0.2s, color 0.2s;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--navy);
+  color: var(--gold);
+}
+
+button.button {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Pied de page */
+footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+/* Formulaire de contact */
+.field {
+  margin-bottom: 1.5rem;
+  max-width: 36rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--navy);
+}
+
+.optional { font-weight: 400; }
+
+input,
+textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  padding: 0.75rem;
+  border: 1px solid #8a93a5;
+  border-radius: 0;
+  background: var(--white);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 3px solid var(--navy);
+}
+
+.error {
+  margin: 0.4rem 0 0;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.error:not(:empty)::before { content: "Erreur : "; }
+
+/* Honeypot anti-spam : hors écran */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+}
