@@ -299,3 +299,22 @@ textarea[aria-invalid="true"] {
   margin-top: 1rem;
   font-weight: 600;
 }
+
+/* Standards suivis */
+.standards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.standards li {
+  border-top: 1px solid #d9dde5;
+  padding: 1rem 0;
+}
+
+.standards strong {
+  display: block;
+  font-family: var(--font-title);
+  color: var(--navy);
+  font-size: 1.15rem;
+}
