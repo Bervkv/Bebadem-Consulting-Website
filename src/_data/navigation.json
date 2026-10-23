@@ -1,0 +1,8 @@
+[
+  { "label": "Accueil", "url": "/" },
+  { "label": "Services", "url": "/services/" },
+  { "label": "Approche", "url": "/approche/" },
+  { "label": "À propos", "url": "/a-propos/" },
+  { "label": "Actualités", "url": "/actualites/" },
+  { "label": "Contact", "url": "/contact/" }
+]
